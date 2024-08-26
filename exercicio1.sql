@@ -2,10 +2,10 @@ create database PRODUTOS;
 
 
 create table Mercado(
-ID int identity(1, 1) not null primary key,
-Produto varchar(100) not null,
-Preco numeric(20, 2) not null,
-Descricao text
+	ID int identity(1, 1) not null primary key,
+	Produto varchar(100) not null,
+	Preco numeric(20, 2) not null,
+	Descricao text
 );
 
 select * from Mercado; 
@@ -20,4 +20,11 @@ insert into mercado (ID,Produto,Preco,Descricao) values (5 ,'PLACA MAE GIGABYTE'
 insert into mercado (ID,Produto,Preco,Descricao) values (6 ,'PLACA MAE ASUS' , 2499.99 , 'TUF GAMING Z790-BTF WIFI');
 insert into mercado (ID,Produto,Preco,Descricao) values (7 ,'PLACA MAE MSI' , 1499.99 , 'MAG B760M MORTAR WIFI II');
 insert into mercado (ID,Produto,Preco,Descricao) values (8 ,'PLACA MAE ASROCK' , 2899.99 , 'Z790 TAICHI LITE, DDR5');
-insert into mercado (ID,Produto,Preco,Descricao) values (9 ,'PLACA MAE GIGABYTE' , 2299.99, 'Z790 AORUS ELITE X, DDR5')
+insert into mercado (ID,Produto,Preco,Descricao) values (9 ,'PLACA MAE GIGABYTE' , 2299.99, 'Z790 AORUS ELITE X, DDR5') 
+
+alter table [Mercado] set [Produto] = '' where [Produto] = ''; -- Altera a Descrição da Tabela Criada
+
+drop  table Mercado; --Deleta a Tabela Criada
+
+update [dbo].[Mercado] set [Produto] =  
+	
