@@ -30,3 +30,4 @@ drop  table Mercado; --Deleta a Tabela Criada
 
 update [Mercado] set [Produto] = 'Processador i9' where ID = 4; --Altera os Valores do Banco de Dados Inseridos 
 
+alter table [dbo].[Mercado] add column Desconto numeric not null after Preco; --Inclui nova tabela antes ou depois da coluna  
