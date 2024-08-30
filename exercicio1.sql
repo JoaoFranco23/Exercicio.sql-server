@@ -12,7 +12,7 @@ create table Mercado(
 
 select * from Mercado; 
 
-set identity_insert dbo.mercado on; --
+set identity_insert dbo.mercado on; --Habilita a Permissão para Inserir os Dados
 
 insert into mercado (Produto,Preco,Descricao) values ('Processador i3' , 798.99 , 'INTEL CORE I3-14100F');
 insert into mercado (Produto,Preco,Descricao) values ('Processador i5' , 1468.99 , 'INTEL CORE I5-14400F');
@@ -28,4 +28,5 @@ alter table [Mercado] set [Produto] = '' where [Produto] = ''; -- Altera a Descr
 
 drop  table Mercado; --Deleta a Tabela Criada
 
-update [Mercado] set [Produto] = 'Processador i7' where [Produto] = 'Processador i7' and [Descricao] = 'INTEL CORE I9-14900KS' or [ID] = 4;  
+update [Mercado] set [Produto] = 'Processador i9' where ID = 4; --Altera os Valores do Banco de Dados Inseridos 
+
