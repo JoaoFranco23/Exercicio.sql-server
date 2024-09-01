@@ -32,4 +32,4 @@ update [Mercado] set [Produto] = 'Processador i9' where ID = 4; --Altera os Valo
 
 alter table [dbo].[Mercado] add Desconto numeric not null default 0; --Inclui nova tabela antes ou depois da coluna 
 
-alter table [dbo].[Mercado] move table 
+alter table [Mercado] change column [Desconto] int after Produto;
