@@ -13,6 +13,7 @@ create table Mercado(
 select * from Mercado; 
 
 set identity_insert dbo.mercado on; --
+SET IDENTITY_INSERT [ PRODUTOS . [ Mercado ] . ] dbo.Desconto { ON | OFF }
 
 insert into mercado (ID,Produto,Preco,Descricao) values (1 ,'Processador i3' , 798.99 , 'INTEL CORE I3-14100F');
 insert into mercado (ID,Produto,Preco,Descricao) values (2 , 'Processador i5' , 1468.99 , 'INTEL CORE I5-14400F');
@@ -32,3 +33,4 @@ update [Mercado] set [Produto] = 'Processador i9' where ID = 4; --Altera os Valo
 
 alter table [dbo].[Mercado] add Desconto numeric not null default 0; --Inclui nova tabela antes ou depois da coluna 
 
+insert into mercado (Desconto) values (5);
